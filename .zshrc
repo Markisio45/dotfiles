@@ -52,7 +52,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
 # Manual aliases
-alias ll='lsd -lh --group-dirs=first'
+alias ll='lsd -lha --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
@@ -60,6 +60,11 @@ alias ls='lsd --group-dirs=first'
 alias cat='batcat'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Adding nvm export
+export NVM_DIR=~/.nvm
+ [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 
 # Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -134,3 +139,9 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/slipery/Descargas/google-cloud-sdk/path.zsh.inc' ]; then . '/home/slipery/Descargas/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/slipery/Descargas/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/slipery/Descargas/google-cloud-sdk/completion.zsh.inc'; fi
