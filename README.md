@@ -15,7 +15,9 @@ As you can see if you run the terminal now, there will be shown some errors on t
 
 We can fix `zsh-syntax-highlighting` and `zsh-autosuggestions` by running the following command
 
-> sudo apt install zsh-syntax-highlighting zsh-autosuggestions
+```sh
+sudo apt install zsh-syntax-highlighting zsh-autosuggestions
+```
 
 Use apt or any other package manager.
 
@@ -30,8 +32,10 @@ Set the file on the directory `/usr/share/zsh-sudo`
 ### Installing powerlevel10k
 
 Go to the GitHub repository romkatv/powerlevel10k and execute the command from Manual Installation:
-> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-> echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
 
 we can download font from the next resources:
 
@@ -48,4 +52,6 @@ Install lsd:
 > sudo dpkg -i lsd_0.23.1_amd64.deb 
 
 Install bat
-> sudo apt install bat
+```sh
+sudo apt install bat
+```

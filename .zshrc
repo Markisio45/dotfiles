@@ -7,11 +7,25 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 #Fix AndriodHome PATH
-[ -d "$HOME/Android/sdk" ] && ANDROID_HOME=$HOME/Android/sdk || ANDROID_HOME=$HOME/Android/Sdk
-echo "export ANDROID_HOME=$ANDROID_HOME" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+#[ -d "$HOME/Android/sdk" ] && ANDROID_HOME=$HOME/Android/sdk || ANDROID_HOME=$HOME/Android/sdk
+#echo "export ANDROID_HOME=$ANDROID_HOME" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+#export PATH=$PATH:$ANDROID_HOME/emulator
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
+#export PATH=$PATH:$HOME/JetbrainsRider/bin
+#export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/tools/bin
 
+export ANDROID_HOME="$HOME/Android/sdk"
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/JetbrainsRider/bin
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 #Set up the prompt
+
+# Export Processing binary
+export PATH=$PATH:/home/markisio/Descargas/processing-4.3/processing-java
 
 autoload -Uz promptinit
 promptinit
@@ -54,7 +68,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Manual configuration
 
-PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+#PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
 # Manual aliases
 alias ll='lsd -lha --group-dirs=first'
@@ -63,6 +77,7 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='batcat'
+alias pjava='/home/markisio/Descargas/processing-4.3/processing-java --sketch=$PWD --run'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -150,203 +165,3 @@ if [ -f '/home/slipery/Descargas/google-cloud-sdk/path.zsh.inc' ]; then . '/home
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/slipery/Descargas/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/slipery/Descargas/google-cloud-sdk/completion.zsh.inc'; fi
-export ANDROID_HOME=/home/slipery/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/root/Android/Sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
-export ANDROID_HOME=/home/slipery/Android/sdk
